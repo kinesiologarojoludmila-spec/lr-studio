@@ -3,18 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ludmila Rojo Studio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
+    <!--HEADER/NAVEGACIÓN-->
     <header>
-
+        <div class="logo-conteniner">
+            <h3>LR</h3>
+            <span class="name">Ludmila Rojo Studio</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>    
+                <li>Inicio</li>
+                <li>Servicios</li>
+                <li>Galeria</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
     </header>
 
-    
 
-    <footer>
+    <main>
+        <!-- 1. SECCIÓN HERO (INICIO) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Ludmila Rojo Studio</h1>
+                <a href="contacto" class="cta-button">Reservar Turno</a>
+            </div>
+            <div>
+                <img src="/assets/img/imgfondo-hero.jpeg" alt="imagen de mi consultorio y los diferentes servicios" loading="eager">
+            </div>
+        </section>
 
+        <!-- 2. SECCIÓN DE TARJETAS (CARDS) -->
+        <section id= "servicios" class="cards-section">
+            <h2 class="section title">Nuestros Servicios Principales</h2>
+            <div class="cards-conteiner">
+                
+                <!--Tarjeta 1:Punción Seca-->
+                <article class="card">
+                    <img class="img-ps" src="/assets/img/img-puncion.jpg" alt="Sesión de Punción Seca"
+                    <div class="card-body">
+                        <h3>Punción Seca</h3>
+                        <p>Tratamiento especializado en el manejo del dolor miofascial y desactivación de puntos gatillo para recuperar la movilidad y reducir la tensión muscular profunda.</p>
+                    </div>
+                </article>
+                <!--Tarjeta 2:Plantillas Ebers-->
+                <article class="card">
+                    <img class="img-ps" src="/assets/img/img-plantillas.jpg" alt="Sesión de Evaluación de la Pisada"
+                    <div class="card-body">
+                        <h3>Plantillas Ebers (Nanotecnología)</h3>
+                        <p>Innovador sistema de evaluación intra-calzado asistido por nanotecnología para el diseño de plantillas ortopédicas personalizadas de alta precisión biomecánica.</p>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <section id="galeria" class="gallery-section">
+            <h2 class="section-title">Espacio y Práctica Profesional</h2>
+            <div class="gallery-mosaic">
+                <img src="/assets/img/img-consul.jpeg" alt="Consultorio minimalista" class="gallery-img">
+                <img src="/assets/img/img-ebers-cinta.jpeg" alt="Evaluación de la Pisada Dinámica y estática" class="gallery-img">
+                <img src="/assets/img/img-eberscerca.jpeg" alt="Detalle de aparatología" class="gallery-img">
+                <img src="/assets/img/img-ps-talon.jpeg" alt="Sesión punción Seca" class="gallery-img">
+                <img src="/assets/img/img-plantillas.jpg" alt="Detalle de plantillas Ebers" class="gallery-img">
+                <img src="/assets/img/img-agujas.jpeg" alt="Agujas Punción Seca" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE CONTACTO (FORMULARIO) -->
+        <section id="contacto" class="contact-section">
+            <h2 class="section-title">Comunicate con Nosotros</h2>
+            <p class="section-subtitle">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+            <form action="#" method="POST" class="contact-form">
+
+            <!-- Campo 1: Nombre -->
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: María Pérez">
+                </div>
+            <!-- Campo 2: Teléfono -->
+                <div class="form-group">
+                    <label for="telefono">Celular:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="2284...">
+                </div>
+
+            <!-- Campo 3: Menú desplegable (Motivo de contacto) -->
+                <div class="form-group">
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Seleccioná una opción</option>
+                        <option value="puncion">Consulta sobre Punción Seca</option>
+                        <option value="ebers">Evaluación y Plantillas Ebers</option>
+                        <option value="general">Consulta General / Kinesiología</option>
+                    </select>
+                </div>
+            <!-- Campo 4: Selección única (Radio buttons) -->
+                <div class="form-group radio-group">
+                    <label>¿Es tu primera visita al estudio?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="primera_visita" value="si" checked> Sí</label>
+                        <label><input type="radio" name="primera_visita" value="no"> No</label>
+                    </div>
+                </div>
+
+            <!-- Campo 6: Comentarios (<textarea>) -->
+                <div class="form-group full-width">
+                    <label for="comentarios">Comentarios o Consultas Adicionales:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Contanos brevemente tu motivo de consulta..."></textarea>
+                </div>
+
+            <!-- Controles: Botones Submit y Reset -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <button type="reset" class="btn-reset">Limpiar</button>
+                </div>
+
+            </form>
+        </section>
+    </main>    
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Ludmila Rojo Studio. Todos los derechos reservados. Olavarría, Buenos Aires.</p>
     </footer>
     
 </body>
