@@ -13,8 +13,8 @@
     <!--HEADER/NAVEGACIÓN-->
     <header class="site-header">
         <div class="header-container">
-            <div class=""logo-container">
-            <h3>LR</h3>
+            <div class="logo-container">
+            <h3 class="logo-transform"->LR</h3>
             <span class="name">Ludmila Rojo <br>Studio</span>
             </div>
             <nav class="nav-menu">
@@ -33,7 +33,7 @@
         <!-- 1. SECCIÓN HERO (INICIO) -->
         <section class="hero-section">
             <div class="hero-img-container">
-                <img class="hero-img" src="assets/img/imgfondo-hero.jpeg" alt="imagen de mi consultorio y los diferentes servicios" loading="eager">
+                <img class="hero-img" src="assets/img/imgfondo-hero.jpg" alt="imagen de mi consultorio y los diferentes servicios" loading="eager">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <h1 class="hero-title">Kinesiología & Biomecánica Avanzada</h1>
@@ -81,64 +81,113 @@
                  <h2>Espacio y Práctica Profesional</h2> 
             </div>
             <div class="gallery-mosaic">
-                <img src="assets/img/img-consul.jpeg" alt="Consultorio minimalista" class="gallery-img">
+                <img src="assets/img/img-puncion.jpg" alt="Sesión de punción" class="gallery-img">
                 <img src="assets/img/img-ebers-cinta.jpeg" alt="Evaluación de la Pisada Dinámica y estática" class="gallery-img">
-                <img src="assets/img/img-eberscerca.jpeg" alt="Detalle de aparatología" class="gallery-img">
-                <img src="assets/img/img-ps-talon.jpeg" alt="Sesión punción Seca" class="gallery-img">
-                <img src="assets/img/img-plantillas.jpg" alt="Detalle de plantillas Ebers" class="gallery-img">
-                <img src="assets/img/img-agujas.jpeg" alt="Agujas Punción Seca" class="gallery-img">
+                <img src="assets/img/img-deco.jpeg" alt="Detalles de decoración" class="gallery-img">
+                <img src="assets/img/img-sistemaebers.jpeg" alt="Imagen de los elementos para realizar la evaluación de la pisada" class="gallery-img">
+                <img src="assets/img/img-ps-talon.jpeg" alt="Imagen de una aguja de puncion seca liberando tendón de aquiles" class="gallery-img">
+                <img src="assets/img/img-plantillas.jpg" alt="Imagen de evaluación dinamica en cinta de caminar" class="gallery-img">
             </div>
         </section> 
 
-        <!-- 4. SECCIÓN DE CONTACTO (FORMULARIO) -->
-
-        <section id="contacto" class="contact-section">
+         <!-- FORMULARIO INTERACTIVO EVALUACIÓN POSTURAL -->
+    <section class="section-padding assessment" id="evaluacion">
+        <div class="container">
             <div class="section-header">
-                <h2>Comunicate con Nosotros</h2>
-                <p class="section-subtitle">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+                <span class="tagline">Consulta Online</span>
+                <h2>Evaluación Postural Interactiva</h2>
+                <p>Completa tus datos y molestias. Se generará un informe detallado listo para enviar por WhatsApp para agendar tu consulta.</p>
             </div>
 
-        <form action="#" method="POST" class="contact-form"></form>
+            <div class="assessment-card">
+                <form id="postureForm">
+                    <div class="form-grid">
+                        <!-- Nombre -->
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Ej. María García" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ludmila Rojo">
-                </div>
+                        <!-- Teléfono -->
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Ej. +54 9 11 1234-5678" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="telefono">Celular</label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="2284...">
-                </div>
+                        <!-- Zonas de Dolor -->
+                        <div class="form-group full-width">
+                            <label>¿En qué zonas sientes dolor o molestia principal?</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-card">
+                                    <input type="checkbox" id="zone1" value="Cuello/Cervical">
+                                    <label for="zone1"><i class="fa-solid fa-head-side-virus"></i> Cuello / Cervical</label>
+                                </div>
+                                <div class="checkbox-card">
+                                    <input type="checkbox" id="zone2" value="Espalda Alta/Dorsal">
+                                    <label for="zone2"><i class="fa-solid fa-child"></i> Espalda Alta</label>
+                                </div>
+                                <div class="checkbox-card">
+                                    <input type="checkbox" id="zone3" value="Zona Lumbar">
+                                    <label for="zone3"><i class="fa-solid fa-person-arrow-down-to-line"></i> Zona Lumbar</label>
+                                </div>
+                                <div class="checkbox-card">
+                                    <input type="checkbox" id="zone4" value="Cadera/Rodillas">
+                                    <label for="zone4"><i class="fa-solid fa-bone"></i> Cadera / Rodillas</label>
+                                </div>
+                                <div class="checkbox-card">
+                                    <input type="checkbox" id="zone5" value="Pies/Pisada">
+                                    <label for="zone5"><i class="fa-solid fa-shoe-prints"></i> Pies / Pisada</label>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label for="motivo">Motivo de contacto</label>
-                    <select id="motivo" name="motivo" required>
-                        <option value="" disabled selected>Seleccioná una opción</option>
-                        <option value="puncion">Consulta sobre Punción Seca</option>
-                        <option value="ebers">Evaluación y Plantillas Ebers</option>
-                        <option value="general">Consulta General / Kinesiología</option>
-                    </select>
-                </div>
+                        <!-- Escala de dolor -->
+                        <div class="form-group full-width">
+                            <label for="painScale">Nivel de Dolor (1 a 10):</label>
+                            <div class="range-container">
+                                <span style="font-size: 0.85rem; color: var(--text-muted);">1 (Leve)</span>
+                                <input type="range" id="painScale" class="range-slider" min="1" max="10" value="5">
+                                <span style="font-size: 0.85rem; color: var(--text-muted);">10 (Severo)</span>
+                                <div class="range-value" id="rangeValue">5</div>
+                            </div>
+                        </div>
 
-                <div class="form-group radio-group">
-                    <label>¿Es tu primera visita al estudio?</label>
-                    <div class="radio-options">
-                        <label><input type="radio" name="primera_visita" value="si" checked> Sí</label>
-                        <label><input type="radio" name="primera_visita" value="no"> No</label>
+                        <!-- Postura de Trabajo Habitual -->
+                        <div class="form-group">
+                            <label for="workPosture">Postura habitual de trabajo</label>
+                            <select id="workPosture" class="form-control">
+                                <option value="Sentado / Oficina / PC">Sentado / Oficina / PC</option>
+                                <option value="De pie muchas horas">De pie muchas horas</option>
+                                <option value="Movimiento continuo / Esfuerzo">Movimiento continuo / Esfuerzo</option>
+                                <option value="Deportista / Alto Rendimiento">Deportista / Actividad física alta</option>
+                            </select>
+                        </div>
+
+                        <!-- Tiempo de evolución -->
+                        <div class="form-group">
+                            <label for="duration">¿Hace cuánto tiempo persiste el síntoma?</label>
+                            <select id="duration" class="form-control">
+                                <option value="Menos de 1 mes (Agudo)">Menos de 1 mes (Agudo)</option>
+                                <option value="1 a 6 meses">1 a 6 meses</option>
+                                <option value="Más de 6 meses (Crónico)">Más de 6 meses (Crónico)</option>
+                            </select>
+                        </div>
+
+                        <!-- Comentarios -->
+                        <div class="form-group full-width">
+                            <label for="comments">Observaciones / Detalles adicionales</label>
+                            <textarea id="comments" class="form-control" rows="3" placeholder="Describe brevemente cuándo aumenta el dolor o si tienes algún diagnóstico previo..."></textarea>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group full-width">
-                    <label for="comentarios">Comentarios o Consultas Adicionales</label>
-                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Contanos brevemente tu motivo de consulta..."></textarea>
-                </div>
-
-                <div class="form-buttons">
-                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
-                    <button type="reset" class="btn-reset">Limpiar</button>
-                </div>
-            </form>
-        </section>
+                    <div class="submit-btn-container">
+                        <button type="button" class="btn-whatsapp-submit" id="sendWhatsappBtn">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar Evaluación por WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>   
 
     <!-- FOOTER -->
