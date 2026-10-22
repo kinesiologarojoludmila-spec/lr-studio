@@ -4,77 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludmila Rojo Studio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css"
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
     <!--HEADER/NAVEGACIÓN-->
-    <header>
-        <div class="logo-conteniner">
+    <header class="site-header">
+        <div id="site-header">
+            <div id=""logo-conteniner">
             <h3>LR</h3>
-            <span class="name">Ludmila Rojo Studio</span>
-        </div>
-        <nav class="nav-menu">
-            <ul>    
+            <span class="name">Ludmila Rojo <br>Studio</span>
+            </div>
+            <nav id="nav-menu">
+            <ul class="navegacion">    
                 <li>Inicio</li>
                 <li>Servicios</li>
                 <li>Galeria</li>
                 <li>Contacto</li>
             </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
 
 
     <main>
         <!-- 1. SECCIÓN HERO (INICIO) -->
-        <section id="inicio" class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Ludmila Rojo Studio</h1>
-                <a href="contacto" class="cta-button">Reservar Turno</a>
-            </div>
-            <div>
-                <img src="/assets/img/imgfondo-hero.jpeg" alt="imagen de mi consultorio y los diferentes servicios" loading="eager">
+        <section class="hero-section">
+            <div class="img-container">
+                <img class="hero-img" src="assets/img/imgfondo-hero.jpeg" alt="imagen de mi consultorio y los diferentes servicios" loading="eager">
+                <div class="hero-content">
+                    <h1 class="hero-title">Kinesiología Personalizada</h1>
+                    <a href="contacto" class="cta-button">Reservar Turno</a>
             </div>
         </section>
 
         <!-- 2. SECCIÓN DE TARJETAS (CARDS) -->
-        <section id= "servicios" class="cards-section">
-            <h2 class="section title">Nuestros Servicios Principales</h2>
+        <section class="servicios-cards">
+            <h2>Nuestros Servicios </h2>
             <div class="cards-conteiner">
-                
-                <!--Tarjeta 1:Punción Seca-->
-                <article class="card">
-                    <img class="img-ps" src="/assets/img/img-puncion.jpg" alt="Sesión de Punción Seca"
+                <article class="card"> 
+                    <img src="assets/img/img-puncion.jpg" alt="Sesión de Punción Seca" class="card-img">
                     <div class="card-body">
                         <h3>Punción Seca</h3>
-                        <p>Tratamiento especializado en el manejo del dolor miofascial y desactivación de puntos gatillo para recuperar la movilidad y reducir la tensión muscular profunda.</p>
+                        <p class="card-text">Tratamiento especializado en el manejo del dolor miofascial y desactivación de puntos gatillo para recuperar la movilidad y reducir la tensión muscular profunda.</p>
+                        <a href="#contacto" class="card-btn">Consultar</a>
                     </div>
                 </article>
-                <!--Tarjeta 2:Plantillas Ebers-->
+
                 <article class="card">
-                    <img class="img-ps" src="/assets/img/img-plantillas.jpg" alt="Sesión de Evaluación de la Pisada"
+                    <img src="assets/img/img-plantillas.jpg" alt="Sistema innovador Ebers de evaluación intra calzado" class="card-img">
                     <div class="card-body">
                         <h3>Plantillas Ebers (Nanotecnología)</h3>
-                        <p>Innovador sistema de evaluación intra-calzado asistido por nanotecnología para el diseño de plantillas ortopédicas personalizadas de alta precisión biomecánica.</p>
+                        <p class="card-text">Innovador sistema de evaluación intra-calzado asistido por nanotecnología para el diseño de plantillas ortopédicas personalizadas de alta precisión biomecánica.</p>
+                        <a href="#contacto" class="card-btn">Ver más</a>
                     </div>
                 </article>
+
             </div>
+                
+           
 
-        </section>
-
-        <section id="galeria" class="gallery-section">
+        <!-- <section id="galeria" class="gallery-section">
             <h2 class="section-title">Espacio y Práctica Profesional</h2>
             <div class="gallery-mosaic">
-                <img src="/assets/img/img-consul.jpeg" alt="Consultorio minimalista" class="gallery-img">
-                <img src="/assets/img/img-ebers-cinta.jpeg" alt="Evaluación de la Pisada Dinámica y estática" class="gallery-img">
-                <img src="/assets/img/img-eberscerca.jpeg" alt="Detalle de aparatología" class="gallery-img">
-                <img src="/assets/img/img-ps-talon.jpeg" alt="Sesión punción Seca" class="gallery-img">
-                <img src="/assets/img/img-plantillas.jpg" alt="Detalle de plantillas Ebers" class="gallery-img">
-                <img src="/assets/img/img-agujas.jpeg" alt="Agujas Punción Seca" class="gallery-img">
+                <img src="assets/img/img-consul.jpeg" alt="Consultorio minimalista" class="gallery-img">
+                <img src="assets/img/img-ebers-cinta.jpeg" alt="Evaluación de la Pisada Dinámica y estática" class="gallery-img">
+                <img src="assets/img/img-eberscerca.jpeg" alt="Detalle de aparatología" class="gallery-img">
+                <img src="assets/img/img-ps-talon.jpeg" alt="Sesión punción Seca" class="gallery-img">
+                <img src="assets/img/img-plantillas.jpg" alt="Detalle de plantillas Ebers" class="gallery-img">
+                <img src="assets/img/img-agujas.jpeg" alt="Agujas Punción Seca" class="gallery-img">
             </div>
-        </section>
+        </section> -->
 
         <!-- 4. SECCIÓN DE CONTACTO (FORMULARIO) -->
         <section id="contacto" class="contact-section">
